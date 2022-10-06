@@ -6,19 +6,19 @@ Feature: BWOHD - Negative Scenario
     When Select plugin: "SAP BW Open Hub" from the plugins list as: "Source"
     Then Navigate to the properties page of plugin: "SAP BW Open Hub"
     Then Enter input plugin property: "referenceName" with value: "SAPBWOHD"
-    Then Enter input plugin property: "SAPCLIENT" with value: "client"
-    Then Enter input plugin property: "Host" with value: "ashost"
+    Then Enter input plugin property: "SAPClient" with value: "client"
+    Then Enter input plugin property: "SAPAppServerHost" with value: "ashost"
     Then Enter input plugin property: "SAPSystemNumber" with value: "sysnr"
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
-    Then Enter input plugin property: "SAPGcsPath" with value: "gcsPath"
+    Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
     Then Enter input plugin property: "ProcessChain" with value: "processChainId"
-    Then Verify that after setting BW parameter "<option>" as "<input>" plugin throws error "<errorMessage>"
+    Then Verify that after setting BW parameter "<pluginProperty>" as "<Value>" plugin throws error "<errorMessage>"
     Examples:
-      | option            | input            | errorMessage                                                                                                                                                                                                                                                                                                           |
-      | jco.client.client | abc              | cdf_sap_01404 - sap connection test failed. please verify the connection parameters. root cause:jco_error_configuration - parameter sap client ('jco.client.client') needs to be a three digit number string instead of 'abc'                                                                                          |
-      | jco.client.lang   | abc              | cdf_sap_01404 - sap connection test failed. please verify the connection parameters. root cause:jco_error_configuration - parameter logon language ('jco.client.lang') code 'abc' is invalid                                                                                                                           |
-      | jco.client.ashost | invalid          | CDF_SAP_01404 - SAP connection test failed. Please verify the connection parameters. Root Cause:JCO_ERROR_COMMUNICATION - Connect to SAP gateway failed                                                                                                                                                                |
-      | jco.client.sysnr  | abc              | cdf_sap_01404 - sap connection test failed. please verify the connection parameters. root cause:jco_error_configuration - parameter abap system number ('jco.client.sysnr') needs to be a two digit number string instead of 'abc'                                                                                     |
-      | processChainId    | abc              | cdf_sap_bw_01400 - sap bw process chain 'abc' could not be found in sap. please ensure that it exists and is active in sap.                                                                                                                                                                                            |
-      | gcsPath           | gs://invalidfile | error encountered while configuring the stage: 'cdf_sap_01412 - one or more sap jco library files are missing. please make sure the required jco library (sapjco3.jar) and its associated os dependent shared library (libsapjco3.so) were uploaded to your specified google cloud storage bucket 'gs://invalidfile'.' |
+      | pluginProperty              | Value                    | errorMessage                                                                                                                                                                                                                                                                                                           |
+      | SAPClient                   | errorValue               | errorMessageSapClient                                          |
+      | SAPLanguage                 | errorValue               | errorMessageSapLanguage                                        |
+      | SAPAppServerHost            | errorValueHost           | errorMessageSapHost                                            |
+      | SAPSystemNumber             | errorValue               | errorMessageSapSystemNumber                                    |
+      | ProcessChain                | errorValue               | errorMessageSapProcessChain                                    |
+      | SAPJCoLibraryGCSPath        | errorValueGcsPath        | errorMessageSapSAPGcsPath                                      |

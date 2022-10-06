@@ -35,22 +35,14 @@ import java.util.Set;
  * Contains BW OHD e2e test scenarios step definitions.
  */
 public class BWOHDStepDefinition implements CdfHelper {
-
-    private static final Logger logger = LoggerFactory.getLogger(PluginPropertyUtils.class); //not used,remove
+    
     private static Gson gson = new Gson();
     private static String materialCreated = StringUtils.EMPTY;
 
-    @Then("Verify {string} is displayed")
-    public void verifyNoErrorMessageIsPresent(String successMessage) {
-        AssertionHelper.verifyElementContainsText(BWOHDLocators.successMessage,
-                successMessage);
-        WaitHelper.waitForElementToBePresent(BWOHDLocators.schemaItem);
-    }
-
     @Then("Verify that after setting BW parameter {string} as {string} plugin throws error {string}")
     public void userIsAbleToSetBWParameterAsAndGettingRowForWrongInput(
-            String inputParameter, String inputValue, String errorMessage) {
-        ElementHelper.replaceElementValue(BWOHDLocators.inputParameter(inputParameter), inputValue);
+            String pluginProperty, String inputValue, String errorMessage) {
+        ElementHelper.replaceElementValue(BWOHDLocators.inputParameter(pluginProperty), inputValue);
         CdfPluginPropertiesActions.clickValidateButton();
         boolean errorExist = errorMessage.
                 toLowerCase().contains(ElementHelper.getElementText(BWOHDLocators.bannerError).toLowerCase());

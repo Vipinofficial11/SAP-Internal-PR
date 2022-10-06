@@ -31,6 +31,18 @@ import java.util.UUID;
  */
 public class TestSetupHooks {
 
+  @Before(order = 1)
+  public static void overrideUserAndPasswordIfProvided() {
+    String username = System.getenv("SAP_BWOHD_USERNAME");
+    if (username != null && !username.isEmpty()) {
+      PluginPropertyUtils.addPluginProp("bwohd_username", username);
+    }
+    String password = System.getenv("SAP_BWOHD_PASSWORD");
+    if (password != null && !password.isEmpty()) {
+      PluginPropertyUtils.addPluginProp("bwohd_password", password);
+    }
+  }
+
   @Before(order = 1, value = "@BQ_SINK_TEST")
   public static void setTempTargetBQTableName() {
     String bqTargetTableName = "E2E_TARGET_" + UUID.randomUUID().toString().replaceAll("-", "_");
