@@ -13,8 +13,9 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_pur2"
+    Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties
     Then Close the Plugin Properties page
     Then Expand Plugin group in the LHS plugins list: "Sink"
@@ -55,11 +56,11 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_mat"
     Then Enter input plugin property: "RequestID" with value: "requestId_mat"
+    Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties
-    Then Verify "No errors found" is displayed
     Then Close the Plugin Properties page
     Then Expand Plugin group in the LHS plugins list: "Sink"
     Then Select plugin: "BigQuery" from the plugins list as: "Sink"
@@ -102,11 +103,11 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_mat"
     Then Enter input plugin property: "RequestID" with value: "requestId_mat"
+    Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties
-    Then Verify "No errors found" is displayed
     Then Close the Plugin Properties page
     Then Expand Plugin group in the LHS plugins list: "Sink"
     Then Select plugin: "BigQuery" from the plugins list as: "Sink"
@@ -149,10 +150,10 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_pur2"
+    Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties
-    Then Verify "No errors found" is displayed
     Then Close the Plugin Properties page
     Then Expand Plugin group in the LHS plugins list: "Sink"
     Then Select plugin: "BigQuery" from the plugins list as: "Sink"
@@ -192,11 +193,11 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_dtty"
     Then Enter input plugin property: "RequestID" with value: "requestId_dtty"
+    Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties
-    Then Verify "No errors found" is displayed
     Then Close the Plugin Properties page
     Then Expand Plugin group in the LHS plugins list: "Sink"
     Then Select plugin: "BigQuery" from the plugins list as: "Sink"

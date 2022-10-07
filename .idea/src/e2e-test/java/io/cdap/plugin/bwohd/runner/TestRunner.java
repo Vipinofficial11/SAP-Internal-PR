@@ -28,9 +28,9 @@ import org.junit.runner.RunWith;
   glue = {"io.cdap.plugin.bwohd.stepsdesign", "stepsdesign", "io.cdap.plugin.common.stepsdesign"},
   tags = {"@BWOHD"},
   monochrome = true,
-  plugin = {"pretty", "html:target/cucumber-html-report",
-    "json:target/cucumber-reports/cucumber.json",
-    "junit:target/cucumber-reports/cucumber.xml"}
+        plugin = {"pretty", "html:target/cucumber-html-report/sap-bwohd",
+                "json:target/cucumber-reports/cucumber-sap-bwohd.json",
+                "junit:target/cucumber-reports/cucumber-sap-hwohd.xml"}
 )
 public class TestRunner {
 }

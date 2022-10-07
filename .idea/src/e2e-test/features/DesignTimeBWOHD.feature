@@ -1,7 +1,6 @@
 @BWOHD
 Feature: BWOHD - Verification of BWOHD Design Time
 
-  @BWOHD
   Scenario:Validate Schema is generating for BW plugin using process chain
     Given Open Datafusion Project to configure pipeline
     When Select plugin: "SAP BW Open Hub" from the plugins list as: "Source"
@@ -29,7 +28,7 @@ Feature: BWOHD - Verification of BWOHD Design Time
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_pur2"
     Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties
@@ -49,7 +48,7 @@ Feature: BWOHD - Verification of BWOHD Design Time
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_pur2"
     Then Enter input plugin property: "RequestID" with value: "requestId_pur"
     Then Click on the Get Schema button
@@ -67,7 +66,7 @@ Feature: BWOHD - Verification of BWOHD Design Time
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
-    Then Click plugin property: "ProcessChainFalse"
+    Then Click plugin property: "UseProcessChain"
     Then Enter input plugin property: "OpenHubDestination" with value: "openHubDestination_pur2"
     Then Click on the Get Schema button
     Then Validate "SAP BW Open Hub" plugin properties

@@ -15,7 +15,7 @@ Feature: BWOHD - Negative Scenario
     Then Enter input plugin property: "ProcessChain" with value: "processChainId"
     Then Verify that after setting BW parameter "<pluginProperty>" as "<Value>" plugin throws error "<errorMessage>"
     Examples:
-      | pluginProperty              | Value                    | errorMessage                                                                                                                                                                                                                                                                                                           |
+      | pluginProperty              | Value                    | errorMessage                                                   |                                                                                                                                                                                                                                                        |
       | SAPClient                   | errorValue               | errorMessageSapClient                                          |
       | SAPLanguage                 | errorValue               | errorMessageSapLanguage                                        |
       | SAPAppServerHost            | errorValueHost           | errorMessageSapHost                                            |
