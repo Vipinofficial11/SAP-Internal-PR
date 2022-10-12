@@ -26,10 +26,6 @@ import org.openqa.selenium.support.How;
  * BW OHD Plugin Locators.
  */
 public class BWOHDLocators {
-  @FindBy(how = How.XPATH, using = "//*[@data-cy='plugin-validation-success-msg']")
-  public static WebElement successMessage;
-  @FindBy(how = How.XPATH, using = "//*[@class='text-danger']//li")
-  public static WebElement bannerError;
   public static By schemaItem = By.xpath("(//*[@placeholder='Field name'])[2]");
 
   public static WebElement inputParameter(String inputParameter) {
