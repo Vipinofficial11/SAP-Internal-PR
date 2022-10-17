@@ -7,7 +7,7 @@ Feature: BWOHD - Negative Scenario
     Then Navigate to the properties page of plugin: "SAP BW Open Hub"
     Then Enter input plugin property: "referenceName" with value: "SAPBWOHD"
     Then Enter input plugin property: "SAPClient" with value: "client"
-    Then Enter input plugin property: "SAPAppServerHost" with value: "ashost"
+    Then Enter input plugin property: "SAPAppServerHost" with value: "serverHost"
     Then Enter input plugin property: "SAPSystemNumber" with value: "sysnr"
     Then Enter input plugin property: "SAPLogonUsername" with value: "bwohd_username"
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"

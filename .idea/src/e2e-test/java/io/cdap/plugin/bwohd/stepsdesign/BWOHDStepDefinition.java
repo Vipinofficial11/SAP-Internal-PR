@@ -42,13 +42,7 @@ public class BWOHDStepDefinition implements CdfHelper {
     
     private static Gson gson = new Gson();
     private static String materialCreated = StringUtils.EMPTY;
-
-    @Then("Verify {string} is displayed")
-    public void verifyNoErrorMessageIsPresent(String successMessage) {
-        AssertionHelper.verifyElementContainsText(CdfPluginPropertiesLocators.pluginValidationSuccessMsg,
-                successMessage);
-        WaitHelper.waitForElementToBePresent(BWOHDLocators.schemaItem);
-    }
+    
     @Then("Verify that after setting BW parameter {string} as {string} plugin throws error {string}")
     public void userIsAbleToSetBWParameterAsAndGettingRowForWrongInput(
             String pluginProperty, String inputValue, String errorMessage) {

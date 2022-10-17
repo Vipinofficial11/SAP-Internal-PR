@@ -41,6 +41,10 @@ public class TestSetupHooks {
     if (password != null && !password.isEmpty()) {
       PluginPropertyUtils.addPluginProp("bwohd_password", password);
     }
+    String sapHost = System.getenv("SAP_BWOHD_HOST");
+    if (sapHost != null && !sapHost.isEmpty()) {
+      PluginPropertyUtils.addPluginProp("serverHost", sapHost);
+    }
   }
 
   @Before(order = 1, value = "@BQ_SINK_TEST")
