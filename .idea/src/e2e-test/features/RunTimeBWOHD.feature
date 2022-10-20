@@ -26,8 +26,8 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "ReferenceName" with value: "BQReferenceName"
     Then Enter input plugin property: "Dataset" with value: "dataset"
     Then Enter input plugin property: "Table" with value: "bqTargetTable"
-    Then Click plugin property: "switch-truncateTable"
-    Then Click plugin property: "switch-allowSchemaRelaxation"
+    Then Click plugin property: "TruncateTable"
+    Then Click plugin property: "UpdateTableSchema"
     Then Validate "BigQuery" plugin properties
     Then Close the Plugin Properties page
     Then Connect plugins: "SAP BW Open Hub" and "BigQuery" to establish connection
@@ -70,8 +70,8 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "ReferenceName" with value: "BQReferenceName"
     Then Enter input plugin property: "Dataset" with value: "dataset"
     Then Enter input plugin property: "Table" with value: "bqTargetTable"
-    Then Click plugin property: "switch-truncateTable"
-    Then Click plugin property: "switch-allowSchemaRelaxation"
+    Then Click plugin property: "TruncateTable"
+    Then Click plugin property: "UpdateTableSchema"
     Then Validate "BigQuery" plugin properties
     Then Close the Plugin Properties page
     Then Connect plugins: "SAP BW Open Hub" and "BigQuery" to establish connection
@@ -117,8 +117,8 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "ReferenceName" with value: "BQReferenceName"
     Then Enter input plugin property: "Dataset" with value: "dataset"
     Then Enter input plugin property: "Table" with value: "bqTargetTable"
-    Then Click plugin property: "switch-truncateTable"
-    Then Click plugin property: "switch-allowSchemaRelaxation"
+    Then Click plugin property: "TruncateTable"
+    Then Click plugin property: "UpdateTableSchema"
     Then Validate "BigQuery" plugin properties
     Then Close the Plugin Properties page
     Then Connect plugins: "SAP BW Open Hub" and "BigQuery" to establish connection
@@ -163,8 +163,8 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "ReferenceName" with value: "BQReferenceName"
     Then Enter input plugin property: "Dataset" with value: "dataset"
     Then Enter input plugin property: "Table" with value: "bqTargetTable"
-    Then Click plugin property: "switch-truncateTable"
-    Then Click plugin property: "switch-allowSchemaRelaxation"
+    Then Click plugin property: "TruncateTable"
+    Then Click plugin property: "UpdateTableSchema"
     Then Validate "BigQuery" plugin properties
     Then Close the Plugin Properties page
     Then Connect plugins: "SAP BW Open Hub" and "BigQuery" to establish connection
@@ -207,8 +207,8 @@ Feature: BWOHD - Verification of BWOHD to BQ successful data transfer
     Then Enter input plugin property: "ReferenceName" with value: "BQReferenceName"
     Then Enter input plugin property: "Dataset" with value: "dataset"
     Then Enter input plugin property: "Table" with value: "bqTargetTable"
-    Then Click plugin property: "switch-truncateTable"
-    Then Click plugin property: "switch-allowSchemaRelaxation"
+    Then Click plugin property: "TruncateTable"
+    Then Click plugin property: "UpdateTableSchema"
     Then Validate "BigQuery" plugin properties
     Then Close the Plugin Properties page
     Then Connect plugins: "SAP BW Open Hub" and "BigQuery" to establish connection

@@ -13,7 +13,8 @@ Feature: BWOHD - Negative Scenario
     Then Enter input plugin property: "SAPLogonPassword" with value: "bwohd_password"
     Then Enter input plugin property: "SAPJCoLibraryGCSPath" with value: "gcsPath"
     Then Enter input plugin property: "ProcessChain" with value: "processChainId"
-    Then Verify that after setting BW parameter "<pluginProperty>" as "<Value>" plugin throws error "<errorMessage>"
+    Then Enter input plugin property: "<pluginProperty>" with value: "<Value>"
+    Then Verify that the Plugin is displaying an error message: "<errorMessage>" on the header
     Examples:
       | pluginProperty              | Value                    | errorMessage                                                   |                                                                                                                                                                                                                                                        |
       | SAPClient                   | errorValue               | errorMessageSapClient                                          |
